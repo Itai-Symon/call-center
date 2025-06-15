@@ -1,4 +1,10 @@
-fastapi 
-uvicorn 
-sqlalchemy
-pydantic
+fastapi==0.115.12
+uvicorn==0.34.3 
+SQLAlchemy==2.0.41
+pydantic==2.7.1
+
+
+# to start app run: 
+1. source venv/bin/activate
+2. cd to /Users/itaisymon/Documents/React/home_assignment/call-center/backend/app
+3. uvicorn main:app --reload  
