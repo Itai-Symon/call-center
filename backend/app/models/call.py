@@ -16,3 +16,4 @@ class Call(Base):
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String, index=True)
     tags = relationship("Tag", secondary=call_tags, back_populates="calls")
+    tasks = relationship("Task", back_populates="call")

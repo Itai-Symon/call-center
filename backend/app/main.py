@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import database
-from routers import tags, calls
+from routers import tags, calls, tasks
 
 database.create_tables()
 
@@ -23,6 +23,7 @@ app.add_middleware(
 # Include routers
 app.include_router(tags.router)
 app.include_router(calls.router)
+app.include_router(tasks.router)
 
 @app.get("/")
 async def root():

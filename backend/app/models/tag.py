@@ -11,7 +11,7 @@ class Tag(Base):
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
     
-    # Add relationship to calls
+    # Relationships
     calls = relationship("Call", secondary="call_tags", back_populates="tags")
     
     def __repr__(self):
