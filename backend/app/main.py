@@ -1,6 +1,7 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import database
-from routers import tags
+from routers import tags, calls
 
 database.create_tables()
 
@@ -10,9 +11,18 @@ app = FastAPI(
     version="1.0.0"
 )
 
+# Configure CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In production, replace with specific origins
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Include routers
 app.include_router(tags.router)
+app.include_router(calls.router)
 
 @app.get("/")
 async def root():
