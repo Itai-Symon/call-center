@@ -6,11 +6,12 @@ class TaskBase(BaseModel):
     name: str
 
 class TaskCreate(TaskBase):
-    pass
+    call_id: Optional[int] = None
 
 class TaskUpdate(BaseModel):
     name: Optional[str] = None
     status: Optional[str] = None
+    call_id: Optional[int] = None
 
 class TaskInDB(TaskBase):
     id: int
