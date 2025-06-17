@@ -217,9 +217,9 @@ const UserPage = () => {
                       setSelectedTags(selectedCallDetails?.tags?.map(t => t.id) || []);
                       setShowTagModal(true);
                     }}
-                    className="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300"
+                    className="w-9 h-9 ml-2 bg-gray-100 text-gray-900 rounded-full flex items-center justify-center shadow-sm hover:bg-gray-200 transition-all duration-150 text-2xl font-bold border border-gray-200"
                   >
-                    <Plus size={14} />
+                    +
                   </button>
                 </div>
               </div>
@@ -231,7 +231,7 @@ const UserPage = () => {
                 <h3 className="text-lg font-semibold">Tasks</h3>
                 <button
                   onClick={() => setShowCreateTaskModal(true)}
-                  className="px-3 py-1 bg-green-600 text-white text-sm rounded-md hover:bg-green-700"
+                  className="px-3 py-1 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700"
                 >
                   New
                 </button>
@@ -276,7 +276,7 @@ const UserPage = () => {
               type="text"
               value={newCallName}
               onChange={(e) => setNewCallName(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter call name"
               disabled={loading}
             />
@@ -308,7 +308,7 @@ const UserPage = () => {
               type="text"
               value={newTaskName}
               onChange={(e) => setNewTaskName(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter task name"
               disabled={loading}
             />
@@ -317,7 +317,7 @@ const UserPage = () => {
             <button
               onClick={handleCreateTask}
               disabled={loading || !newTaskName.trim()}
-              className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:opacity-50"
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50"
             >
               {loading ? 'Creating...' : 'Submit'}
             </button>
