@@ -2,10 +2,9 @@ services:
   - type: web
     name: call-center-api
     env: python
+    runtime: python-3.11
     buildCommand: pip install -r backend/app/requirements.txt
     startCommand: cd backend/app && uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
-      - key: PYTHON_VERSION
-        value: 3.11.0
       - key: ALLOWED_ORIGINS
         value: "https://call-center-sooty.vercel.app/"
