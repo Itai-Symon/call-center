@@ -17,4 +17,4 @@ class Tag(TagBase):
     updated_at: datetime
     
     class Config:
-        from_attributes = True  # This allows SQLAlchemy models to be converted to Pydantic models
+        orm_mode = True

@@ -21,7 +21,7 @@ class TaskInDB(TaskBase):
     call_id: Optional[int] = None
 
     class Config:
-        from_attributes = True
+        orm_mode = True
 
 class Task(TaskInDB):
     pass 

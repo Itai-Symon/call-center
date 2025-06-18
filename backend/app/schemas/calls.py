@@ -13,4 +13,4 @@ class Call(CallBase):
     tags: List[Tag] = []
 
     class Config:
-        from_attributes = True 
+        orm_mode = True 
