@@ -22,7 +22,7 @@ const AdminPage = () => {
       setTags(data);
     } catch (error) {
       console.error('Error loading tags:', error);
-      setError('Failed to load tags. Make sure your backend is running on http://localhost:8000');
+      setError('Failed to load tags. Make sure your backend is running');
     }
   };
 
