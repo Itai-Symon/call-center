@@ -1,7 +1,7 @@
 import type { Tag, Call, Task, TaskStatus } from '../types/index'
 
 // Use environment variable for API base URL, fallback to localhost for development
-export const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+export const API_BASE = import.meta.env.VITE_API_BASE_URL || 'https://yoav-call-center.onrender.com';
 
 export const api = {
   // Tag
