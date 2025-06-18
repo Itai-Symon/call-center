@@ -20,7 +20,6 @@ const AdminPage = () => {
       setError('');
       const data = await api.getTags();
       setTags(data);
-      console.log('Loaded tags:', data);
     } catch (error) {
       console.error('Error loading tags:', error);
       setError('Failed to load tags. Make sure your backend is running on http://localhost:8000');
@@ -34,7 +33,6 @@ const AdminPage = () => {
     setError('');
     try {
       const newTag = await api.createTag(newTagName.trim());
-      console.log('Created tag:', newTag);
       setNewTagName('');
       loadTags(); // Reload tags
     } catch (error) {
@@ -158,14 +156,6 @@ const AdminPage = () => {
           </div>
         </div>
       </Modal>
-      </div>
-
-      {/* Debug Info */}
-      <div className="mt-8 p-4 bg-gray-100 rounded-md">
-        <h3 className="font-semibold mb-2">Debug Info:</h3>
-        <p className="text-sm">API Base: {API_BASE}</p>
-        <p className="text-sm">Tags Count: {tags.length}</p>
-        <p className="text-sm">Loading: {loading ? 'Yes' : 'No'}</p>
       </div>
     </div>
   );

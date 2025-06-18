@@ -35,7 +35,6 @@ const UserPage = () => {
       setError('');
       const data = await api.getCalls();
       setCalls(data);
-      console.log('Loaded calls:', data);
     } catch (error) {
       console.error('Error loading calls:', error);
       setError('Failed to load calls. Make sure your backend is running.');
@@ -71,7 +70,6 @@ const UserPage = () => {
     setError('');
     try {
       const newCall = await api.createCall(newCallName.trim());
-      console.log('Created call:', newCall);
       setNewCallName('');
       setShowCreateCallModal(false);
       loadCalls();
@@ -177,12 +175,6 @@ const UserPage = () => {
               </div>
             ))
           )}
-        </div>
-
-        {/* Debug Info */}
-        <div className="mt-4 p-2 bg-gray-50 rounded text-xs">
-          <p>Calls loaded: {calls.length}</p>
-          <p>Selected: {selectedCall ? selectedCall.title : 'None'}</p>
         </div>
       </div>
 
