@@ -83,7 +83,7 @@ const AdminPage = () => {
             placeholder="Tag name"
             value={newTagName}
             onChange={(e) => setNewTagName(e.target.value)}
-            className="px-3 py-2 border text-white border-gray-300 rounded-md flex-1"
+            className="px-3 py-2 border border-gray-300 rounded-md flex-1 bg-white text-black dark:bg-black dark:text-white"
             disabled={loading}
             onKeyPress={(e) => e.key === 'Enter' && handleCreateTag()}
           />
@@ -133,7 +133,7 @@ const AdminPage = () => {
             type="text"
             value={editTagName}
             onChange={(e) => setEditTagName(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md text-white"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md bg-white text-black dark:bg-black dark:text-white"
             placeholder="Enter new tag name"
           />
           <div className="flex justify-end gap-2">

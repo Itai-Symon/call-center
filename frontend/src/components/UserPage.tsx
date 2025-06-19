@@ -268,7 +268,7 @@ const UserPage = () => {
               type="text"
               value={newCallName}
               onChange={(e) => setNewCallName(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md bg-white text-black dark:bg-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter call name"
               disabled={loading}
             />
@@ -300,7 +300,7 @@ const UserPage = () => {
               type="text"
               value={newTaskName}
               onChange={(e) => setNewTaskName(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md bg-white text-black dark:bg-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter task name"
               disabled={loading}
             />
